@@ -1,0 +1,15 @@
+<h2><a href="https://www.geeksforgeeks.org/problems/rat-maze-with-multiple-jumps3852/1?page=2&category=Backtracking&sortBy=submissions">Rat Maze With Multiple Jumps</a></h2><h3>Difficulty Level : Difficulty: Medium</h3><hr><div class="problems_problem_content__Xm_eO" style="--text-color: var(--problem-text-color);"><p><span style="font-size: 14pt;">Given a matrix <strong>mat[][]</strong> of size <strong>n × n</strong>, where <strong>mat[i][j]</strong> represents the maximum number of steps a rat can jump either forward (right) or downward from that cell, find a path for the rat to reach from the <strong>top-left cell</strong> (0, 0) to the <strong>bottom-right cell</strong> (n - 1, n - 1). A cell containing 0 is blocked and cannot be used in the path.</span></p>
+<p><span style="font-size: 14pt;">Return an <strong>n × n</strong> matrix where <strong>1</strong> represents the cells included in the path and <strong>0</strong> represents the remaining cells.</span></p>
+<p><strong><span style="font-size: 14pt;">Note: </span></strong><span style="font-size: 14pt;">If multiple valid paths exist, choose the path with the shortest possible jumps first. For the same jump length, moving forward (right) should be preferred over moving downward.</span></p>
+<p><span style="font-size: 18px;"><strong>Example:</strong></span></p>
+<pre><span style="font-size: 18px;"><strong>Input: </strong>mat[][] = [[2, 1, 0, 0],<br>                [3, 0, 0, 1],<br>                [0, 1, 0, 1],
+                [0, 0, 0, 1]]
+<strong>Output: </strong>[[1, 0, 0, 0],<br>        [1, 0, 0, 1],<br>        [0, 0, 0, 1],
+        [0, 0, 0, 1]]
+<strong>Explanation: <br></strong>The rat starts from cell (0, 0) which contains value 2, so it can jump at most 2 steps either right or downward. <br>It first tries moving right to (0, 1), but this path does not lead to the destination. <br>The rat then moves downward to (1, 0) which contains value 3. <br>From this cell, it jumps 3 steps to the right and reaches (1, 3). <br>Since (1, 3) contains value 1, the rat can move downward one step at a time to (2, 3) and finally to (3, 3), which is the destination cell.</span>
+</pre>
+<pre><span style="font-size: 18px;"><strong>Input: </strong>mat[][] = [[2, 1, 0, 0],<br>               [2, 0, 0, 1],<br>               [0, 1, 0, 1],
+               [0, 0, 0, 1]]
+<strong>Output:</strong> [[-1]]
+<strong>Explanation: <br></strong>The rat starts from cell (0, 0) which contains value 2, so it can jump at most 2 steps either right or downward. <br>However, every possible path eventually gets blocked by cells containing 0, making it impossible to reach the destination cell (3, 3). <br>Therefore, no valid path exists and the output is [[-1]].</span>&nbsp;&nbsp;</pre>
+<p><span style="font-size: 18px;"><strong>Constraints:</strong><br>1 ≤ n ≤ 50<br>1 ≤ mat[i][j] ≤ 20</span></p></div><br><p><span style=font-size:18px><strong>Topic Tags : </strong><br><code>Matrix</code>&nbsp;<code>Backtracking</code>&nbsp;<code>Data Structures</code>&nbsp;<code>Algorithms</code>&nbsp;

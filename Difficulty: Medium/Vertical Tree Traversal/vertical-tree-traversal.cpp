@@ -16,7 +16,6 @@ class Node {
 class Solution {
   public:
     vector<vector<int>> verticalOrder(Node *root) {
-        // code here
         vector<vector<int>>ans;
         if(root == NULL) return ans;
         map<int,vector<int>>mp;

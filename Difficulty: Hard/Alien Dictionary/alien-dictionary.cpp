@@ -6,14 +6,12 @@ public:
         vector<int> indegree(26, 0);
         vector<bool> present(26, false);
         
-        // mark present characters
         for(auto word : words) {
             for(char c : word) {
                 present[c - 'a'] = true;
             }
         }
         
-        // build graph
         for(int i = 0; i < words.size() - 1; i++) {
             string s1 = words[i];
             string s2 = words[i + 1];
@@ -30,11 +28,9 @@ public:
                 }
             }
             
-            // invalid case (prefix problem)
             if(!found && s1.size() > s2.size()) return "";
         }
         
-        // BFS (Kahn's Algo)
         queue<int> q;
         for(int i = 0; i < 26; i++) {
             if(present[i] && indegree[i] == 0) {
@@ -58,7 +54,6 @@ public:
             }
         }
         
-        // count unique chars
         int count = 0;
         for(int i = 0; i < 26; i++) {
             if(present[i]) count++;

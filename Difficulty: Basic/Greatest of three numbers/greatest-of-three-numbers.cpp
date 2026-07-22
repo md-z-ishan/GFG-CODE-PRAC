@@ -8,9 +8,7 @@ int main() {
     cin >> c;
 
     // code here
-   cout<<max(a,max(b,c));
-        
-    
+    cout<<max(a,max(b,c));
 
     return 0;
 }
